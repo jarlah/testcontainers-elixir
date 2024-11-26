@@ -7,17 +7,6 @@ defmodule Hello.Application do
 
   @impl true
   def start(_type, _args) do
-    if Application.get_env(:testcontainers, :enabled, false) do
-      {:ok, _container} = Testcontainers.Ecto.postgres_container(app: :hello)
-
-      # to use mysql, change
-      # `adapter: Ecto.Adapters.Postgres`
-      # in lib/hello/repo.ex, to
-      # `adapter: Ecto.Adapters.MyXQL`
-
-      # {:ok, _container} = Testcontainers.Ecto.mysql_container(app: :hello)
-    end
-
     children = [
       HelloWeb.Telemetry,
       Hello.Repo,
