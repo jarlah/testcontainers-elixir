@@ -19,21 +19,16 @@ jobs:
   build:
     name: Build and test
     runs-on: ubuntu-20.04
-
     strategy:
       fail-fast: false
       matrix:
         pair:
+          - elixir: 1.17
+            otp: 26.2
           - elixir: 1.16
             otp: 26.2
           - elixir: 1.15
             otp: 26.2
-          - elixir: 1.14
-            otp: 25.3
-          - elixir: 1.13
-            otp: 25.3
-          - elixir: 1.13
-            otp: 24.2
 
     steps:
     - uses: actions/checkout@v3

@@ -20,6 +20,12 @@ Before you begin, ensure you have met the following requirements:
 - You have a Docker runtime installed
 - You are familiar with Elixir and Docker basics
 
+## Tested compability
+
+- 1.17	25 - 26 (27 is not supported by rabbit_common, so if you dont use that you can still use 27)
+- 1.16	24 - 26
+- 1.15	24 - 26
+
 ## Installation
 
 To add Testcontainers to your project, follow these steps:

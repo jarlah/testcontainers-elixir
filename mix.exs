@@ -51,9 +51,6 @@ defmodule TestcontainersElixir.MixProject do
       {:tesla, "~> 1.7"},
       {:jason, "~> 1.4"},
       {:hackney, "~> 1.20"},
-      # ecto module
-      {:ecto_sql, "~> 3.3", optional: true},
-      {:ecto, "~> 3.3", optional: true},
       # mysql
       {:myxql, "~> 0.4", only: [:dev, :test]},
       # postgres
